@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Univrsal-LocationManager</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="location_lat">Latitude: </string>
+    <string name="location_long">Longitude: </string>
+    <string name="my_location">My location: </string>
+    <string name="location_error_define">"Location is not defined"</string>
+</resources>
