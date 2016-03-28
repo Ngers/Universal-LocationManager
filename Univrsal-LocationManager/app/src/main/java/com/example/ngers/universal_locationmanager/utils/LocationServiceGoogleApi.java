@@ -15,14 +15,14 @@ import com.google.android.gms.location.LocationServices;
 /**
  * Created by ngers on 29.12.15.
  */
-public class LocationServesGoogleApi extends LocationNameServes implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, LocationServes {
+public class LocationServiceGoogleApi extends LocationNameService implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener, LocationListener, LocationService {
     private GoogleApiClient mGoogleApiClient;
     private LocationRequest mLocationRequest;
     private android.location.Location mLastLocation;
     private Context mContext;
-    private static LocationServesGoogleApi instance;
+    private static LocationServiceGoogleApi instance;
 
-    private LocationServesGoogleApi(Context context) {
+    private LocationServiceGoogleApi(Context context) {
         super(context);
         if (mGoogleApiClient == null) {
             mGoogleApiClient = new GoogleApiClient.Builder(context)
@@ -34,9 +34,9 @@ public class LocationServesGoogleApi extends LocationNameServes implements Googl
         this.mContext = context;
     }
 
-    public static LocationServesGoogleApi getInstance(Context context) {
+    public static LocationServiceGoogleApi getInstance(Context context) {
         if (instance == null)
-            instance = new LocationServesGoogleApi(context);
+            instance = new LocationServiceGoogleApi(context);
         return instance;
     }
 

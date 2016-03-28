@@ -9,15 +9,15 @@ import android.os.Bundle;
 /**
  * Created by ngers on 29.12.15.
  */
-public class LocationServesGPS extends LocationNameServes implements LocationServes {
+public class LocationServiceGPS extends LocationNameService implements LocationService {
 
     private LocationManager locationManager;
 
     private Location mLastLocation;
     private Context mContext;
-    private static LocationServesGPS instance;
+    private static LocationServiceGPS instance;
 
-    private LocationServesGPS(Context context) {
+    private LocationServiceGPS(Context context) {
         super(context);
         this.mContext = context;
         locationManager = (LocationManager) mContext.getSystemService(mContext.LOCATION_SERVICE);
@@ -25,9 +25,9 @@ public class LocationServesGPS extends LocationNameServes implements LocationSer
 
     }
 
-    public static LocationServesGPS getInstance(Context context) {
+    public static LocationServiceGPS getInstance(Context context) {
         if (instance == null)
-            instance = new LocationServesGPS(context);
+            instance = new LocationServiceGPS(context);
         return instance;
     }
 

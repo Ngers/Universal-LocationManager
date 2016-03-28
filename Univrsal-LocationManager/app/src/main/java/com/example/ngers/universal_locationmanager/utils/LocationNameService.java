@@ -13,11 +13,11 @@ import java.util.Locale;
 /**
  * Created by ngers on 27.03.16.
  */
-public class LocationNameServes {
+public class LocationNameService {
     private List<Address> addresses;
     private Context mContext;
 
-    public LocationNameServes(Context mContext) {
+    public LocationNameService(Context mContext) {
         this.mContext = mContext;
     }
 

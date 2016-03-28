@@ -8,13 +8,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.ngers.universal_locationmanager.utils.LocationServesGPS;
-import com.example.ngers.universal_locationmanager.utils.LocationServesGoogleApi;
+import com.example.ngers.universal_locationmanager.utils.LocationServiceGPS;
+import com.example.ngers.universal_locationmanager.utils.LocationServiceGoogleApi;
 
 public class MyLocation extends AppCompatActivity {
 
-    private LocationServesGoogleApi locationServesGoogleApi;
-    private LocationServesGPS locationServesGPS;
+    private LocationServiceGoogleApi locationServesGoogleApi;
+    private LocationServiceGPS locationServesGPS;
     private TextView tvLat;
     private TextView tvLong;
     private TextView tvMyLocation;
@@ -73,10 +73,10 @@ public class MyLocation extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        locationServesGoogleApi = LocationServesGoogleApi.getInstance(this);
+        locationServesGoogleApi = LocationServiceGoogleApi.getInstance(this);
         locationServesGoogleApi.onStart();
 
-        locationServesGPS = LocationServesGPS.getInstance(this);
+        locationServesGPS = LocationServiceGPS.getInstance(this);
         locationServesGPS.onStart();
     }
 

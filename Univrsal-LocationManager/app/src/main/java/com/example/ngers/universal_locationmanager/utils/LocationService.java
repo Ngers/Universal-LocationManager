@@ -3,13 +3,13 @@ package com.example.ngers.universal_locationmanager.utils;
 /**
  * Created by ngers on 25.03.16.
  */
-public interface LocationServes {
+public interface LocationService {
     /**
      * Shows included or not the definition of location.
      */
     boolean isWork();
     /**
-     * Return name location or "LocationServes not specified".
+     * Return name location or "LocationService not specified".
      */
     String getLocationName();
     /**
